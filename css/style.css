@@ -1,12 +1,13 @@
 @import url('https://fonts.cdnfonts.com/css/harry-potter');
-body, html {
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
+    scroll-behavior: smooth; /* Ensures smooth scrolling */
+    font-family: 'Harry Potter', sans-serif;
 }
-body {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='20' font-size='20'%3E🪄%3C/text%3E%3C/svg%3E"), auto;
+body{
+    cursor: url('./img/cursor.png'), auto;
 }
 header{
     text-align: center;
@@ -17,6 +18,8 @@ header{
     max-width: 300px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    padding: 2rem;
+    margin: 0 auto;
 }
 .logo:hover{
     transform: scale(1.1);
@@ -24,9 +27,13 @@ header{
 }
 header {
     position: relative;
-    z-index: 10;
+    text-align: center;
+    padding: 2rem;
 }
-
+header, .navbar {
+    margin: 0;
+    padding: 0;
+}
 #video-background {
     position: fixed;
     top: 0;
@@ -34,16 +41,18 @@ header {
     width: 100%;
     height: 100%;
     z-index: -1;
-    pointer-events: none; 
+    pointer-events: none;
     overflow: hidden;
-    scroll-behavior: smooth;
 }
-.navbar{
+/* *******************START OF NAVBAR********************** */
+.navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-    padding: 1rem;
-    position: relative;
+    margin-top: 1rem;
+    width: 100%; 
+    padding: 0 2rem; 
+    box-sizing: border-box; 
 }
 .navlink{
     font-family: 'Harry Potter', sans-serif;
@@ -52,6 +61,9 @@ header {
     display: flex;
     gap: 2rem;
     position: relative;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
 }
 .navlink1{
     font-family: 'Harry Potter', sans-serif;
@@ -59,40 +71,119 @@ header {
     list-style: none;
     display: flex;
     gap: 2rem;
+    position: relative;
+    padding: 0;
+    margin: 0;  
+    justify-content: flex-end;
 }
 ul{
     margin: 0;
-    padding: 0 2rem; 
+    padding: 2rem; 
     list-style-type: none; 
     position: relative;
 }
-.navlink li a{
-    text-decoration: none;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 10px 4px;
+.navlink li, .navlink1 li {
+    margin-right: 2rem; 
+    position: relative;
+    cursor: pointer;
     transition: color 0.3s ease;
-    text-align: center;
-    color: gray;
 }
-.navlink li a:hover{
-    font-size:larger;
+.navlink li a, .navlink1 li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: gray;
+    transition: color 0.3s ease;
+}
+.navlink li a:hover, .navlink1 li a:hover {
+    font-size: larger;
     color: gold;
     filter: drop-shadow(0 0 15px rgba(255, 223, 0, 1));
 }
-.navlink1 li a{
-    text-decoration: none;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 10px 4px;
-    transition: color 0.3s ease;
+/* ******************END OF NAVBAR************************** */
+.gap{
+    margin-bottom: 29%;
+}
+/* ******************START OF FORM************************** */
+.form-container {
+    margin: 0 auto; /* Center the section */
+    padding: 2rem 0; /* Add spacing within the section */
     text-align: center;
-    color: gray;
-}
-.navlink1 li a:hover{
-    font-size:larger;
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 1.5rem;
     color: gold;
-    filter: drop-shadow(0 0 15px rgba(255, 223, 0, 1));
+    background: rgb(0, 0, 0);
 }
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+form input, form textarea, form select, form button {
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: 2px solid gold;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+form button {
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+form button:hover {
+    background-color: gold;
+    color: black;
+    transform: scale(1.05);
+}
+/* ******************END OF FORM************************** */
+/* ******************START OF ABOUT US************************** */
+.about-us {
+    margin: 0 auto; /* Center the section */
+    padding: 2rem 0; /* Add spacing within the section */
+    text-align: center;
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 1.5rem;
+    color: gold;
+    background: url('./img/capbg.png') center center no-repeat; 
+    background-size: cover;
+  }
+  
+  .about-us h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white; /* Ensure the text contrasts with the background */
+  }
+  
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Add spacing between image and content */
+  }
+  
+  .about-img {
+    flex: 1; /* Allow the image to adjust its size */
+    max-width: 500px; /* Limit the image size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners to the image */
+  }
+  
+  .about-content {
+    flex: 1; /* Allow the content to adjust its size */
+    padding: 0 2rem; /* Add spacing around the text */
+    text-align: left; /* Align the content to the left */
+    color: white; /* Ensure readability on a custom background */
+  }
+  
+  /* ******************END OF ABOUT US************************** */
