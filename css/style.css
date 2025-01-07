@@ -163,10 +163,11 @@ ul {
     font-family: 'Harry Potter', sans-serif;
     font-size: 1.5rem;
     color: gold;
-    background: url(https://i.pinimg.com/736x/7d/a3/c5/7da3c5b42d6874ca15ab005af717f748.jpg) no-repeat center center;
+    background: url(https://i.pinimg.com/736x/58/f3/b2/58f3b29425be672eb0d9e7fec05612b0.jpg) no-repeat center center;
     /* Ensure image doesn't repeat and is centered */
     background-size: cover;
     /* Make the image cover the entire container */
+    height: 80vh;
 }
 
 form {
@@ -290,12 +291,13 @@ form button:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    height: 120vh;
 }
 
 .content {
+    padding: 12%;
     max-width: 600px;
 }
 
@@ -303,11 +305,13 @@ form button:hover {
     font-size: 3rem;
     margin-bottom: 1rem;
     line-height: 1.2;
+    color: white;
 }
 
 .content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    color: white;
 }
 
 .find-out-btn {
@@ -330,6 +334,7 @@ form button:hover {
     width: 500px;
     height: 500px;
     animation: float 1s ease-in-out infinite;
+    padding: 200px;
 }
 
 @keyframes float {
@@ -353,7 +358,7 @@ footer {
     /* Add spacing within the section */
     text-align: center;
     font-family: 'Harry Potter', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     color: gold;
     background: rgb(16, 8, 8);
     position: relative;
