@@ -12,38 +12,55 @@
 
 <body>
     <div>
+        <audio id="background-music" loop>
+            <source src="./audio/background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2>Enable Sound</h2>
+                <p>Click the button below to start the music.</p>
+                <button id="enable-sound">Enable Sound</button>
+                <p id="error-message" style="color: red; display: none;">Could not play music. Check the console for details.</p>
+            </div>
+        </div>        
+
         <div id="video-background">
             <iframe
                 src="https://www.youtube-nocookie.com/embed/IaBz8bBaC0M?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&start=0&playsinline=1&loop=1&playlist=IaBz8bBaC0M"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
                 style="width: 100%; height: 100%; border:none;">
             </iframe>
+            <div class="gap"></div> <!-- Adjust the height of the gap as needed -->
         </div>
+
         <header>
             <img src="./img/logo.png" class="logo">
             <div class="navbar">
                 <nav class="navlink">
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="#about">About Us</a></li>
                     </ul>
                 </nav>
                 <nav class="navlink1">
                     <ul>
-                        <li><a href="#">Get Started</a></li>
+                        <li><a href="#get-started">Get Started</a></li>
                         <li><a href="#form">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+
         <div class="gap"></div>
         <!--About Us-->
-        <div class="about-us">
+        <div class="about-us" id="about">
             <h2>About Us</h2>
             <div class="about-wrapper">
-                <div class="about-img">
+                <!-- <div class="about-img">
                     <img src="./img/abtUs.png" alt="About Us">
-                </div>
+                </div> -->
                 <div class="about-content">
                     <p>
                         At Wizarding World Chronicles, we celebrate the wonders of Harry Potter. Explore spells,
@@ -53,9 +70,43 @@
                 </div>
             </div>
         </div>
+        <!--House Selection-->
+        <div class="container" id="get-started" style="background-image: url(./img/capbg.jpg); background-size: cover;">
+            <div class="content">
+                <h1>Welcome To Potterverse University</h1>
+                <p>Before We Start Let's Find Out Which Hogwarts House You Belong To.</p>
+                <a href="./find_out.html" class="find-out-btn">Find Out</a>
+            </div>
+            <div class="image">
+                <img src="./img/cap.png" alt="Sorting Hat">
+            </div>
+        </div>
 
+        <!-- Cards Section -->
+        <!-- <div class="cards-container">
+            <div class="card">
+                <img src="gryffindor.png" alt="Gryffindor">
+                <h2>Gryffindor</h2>
+                <p>The house of bravery, daring, and chivalry.</p>
+            </div>
+            <div class="card">
+                <img src="hufflepuff.png" alt="Hufflepuff">
+                <h2>Hufflepuff</h2>
+                <p>The house of loyalty, patience, and hard work.</p>
+            </div>
+            <div class="card">
+                <img src="ravenclaw.png" alt="Ravenclaw">
+                <h2>Ravenclaw</h2>
+                <p>The house of intelligence, wit, and wisdom.</p>
+            </div>
+            <div class="card">
+                <img src="slytherin.png" alt="Slytherin">
+                <h2>Slytherin</h2>
+                <p>The house of ambition, cunning, and resourcefulness.</p>
+            </div>
+        </div> -->
 
-
+        <!--Form-->
         <div class="form-container" id="form">
             <h2>Hogwarts Registration Form</h2>
             <form>
@@ -77,6 +128,11 @@
             </form>
         </div>
     </div>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2025 Wizarding World Chronicles. All rights reserved.</p>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>

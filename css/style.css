@@ -1,39 +1,52 @@
 @import url('https://fonts.cdnfonts.com/css/harry-potter');
-html, body {
+
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-    scroll-behavior: smooth; /* Ensures smooth scrolling */
+    scroll-behavior: smooth;
+    /* Ensures smooth scrolling */
     font-family: 'Harry Potter', sans-serif;
 }
-body{
+
+body {
     cursor: url('./img/cursor.png'), auto;
 }
-header{
+
+header {
     text-align: center;
     padding: 2rem;
     position: relative;
 }
-.logo{
+
+.logo {
     max-width: 300px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
     padding: 2rem;
     margin: 0 auto;
+    padding-top: 20%;
 }
-.logo:hover{
+
+.logo:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 15px rgba(255, 223, 0, 1));
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 header {
     position: relative;
     text-align: center;
     padding: 2rem;
 }
-header, .navbar {
+
+header,
+.navbar {
     margin: 0;
     padding: 0;
 }
+
 #video-background {
     position: fixed;
     top: 0;
@@ -44,8 +57,9 @@ header, .navbar {
     pointer-events: none;
     overflow: hidden;
 }
+
 /* *******************START OF NAVBAR********************** */
-.navbar {
+/* .navbar {        
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -53,8 +67,30 @@ header, .navbar {
     width: 100%; 
     padding: 0 2rem; 
     box-sizing: border-box; 
+} */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: -1000px;
+    /* Start off-screen */
+    left: 0;
+    width: 100%;
+    padding: 1rem 3rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background */
+    transition: top 0.3s ease;
+    /* Smooth transition effect */
+    z-index: 10;
 }
-.navlink{
+
+.navbar.visible {
+    top: 0;
+    /* Slide in when scrolled */
+}
+
+.navlink {
     font-family: 'Harry Potter', sans-serif;
     font-size: 1.5rem;
     list-style: none;
@@ -65,7 +101,8 @@ header, .navbar {
     margin: 0;
     justify-content: flex-start;
 }
-.navlink1{
+
+.navlink1 {
     font-family: 'Harry Potter', sans-serif;
     font-size: 1.5rem;
     list-style: none;
@@ -73,46 +110,65 @@ header, .navbar {
     gap: 2rem;
     position: relative;
     padding: 0;
-    margin: 0;  
+    margin: 0;
     justify-content: flex-end;
 }
-ul{
+
+ul {
     margin: 0;
-    padding: 2rem; 
-    list-style-type: none; 
+    padding: 2rem;
+    list-style-type: none;
     position: relative;
 }
-.navlink li, .navlink1 li {
-    margin-right: 2rem; 
+
+.navlink li,
+.navlink1 li {
+    margin-right: 2rem;
     position: relative;
     cursor: pointer;
     transition: color 0.3s ease;
 }
-.navlink li a, .navlink1 li a {
+
+.navlink li a,
+.navlink1 li a {
     text-decoration: none;
     font-size: 1.5rem;
     color: gray;
     transition: color 0.3s ease;
 }
-.navlink li a:hover, .navlink1 li a:hover {
+
+.navlink li a:hover,
+.navlink1 li a:hover {
     font-size: larger;
     color: gold;
     filter: drop-shadow(0 0 15px rgba(255, 223, 0, 1));
 }
+
 /* ******************END OF NAVBAR************************** */
-.gap{
+.gap {
     margin-bottom: 29%;
 }
+
+.gap {
+    margin-top: 39%;
+}
+
 /* ******************START OF FORM************************** */
 .form-container {
-    margin: 0 auto; /* Center the section */
-    padding: 2rem 0; /* Add spacing within the section */
+    margin: 0 auto;
+    /* Center the section */
+    padding: 2rem 0;
+    /* Add spacing within the section */
     text-align: center;
     font-family: 'Harry Potter', sans-serif;
     font-size: 1.5rem;
     color: gold;
-    background: rgb(0, 0, 0);
+    background: url(https://i.pinimg.com/736x/7d/a3/c5/7da3c5b42d6874ca15ab005af717f748.jpg) no-repeat center center;
+    /* Ensure image doesn't repeat and is centered */
+    background-size: cover;
+    /* Make the image cover the entire container */
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -120,70 +176,239 @@ form {
     max-width: 400px;
     margin: 0 auto;
 }
-form input, form textarea, form select, form button {
+
+form input,
+form textarea,
+form select,
+form button {
     font-family: 'Harry Potter', sans-serif;
     font-size: 1.2rem;
     padding: 0.5rem;
     border: 2px solid gold;
-    border-radius: 5px;
     background: rgba(0, 0, 0, 0.8);
     color: white;
 }
+
 form button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 form button:hover {
     background-color: gold;
     color: black;
     transform: scale(1.05);
 }
+
 /* ******************END OF FORM************************** */
-/* ******************START OF ABOUT US************************** */
 .about-us {
-    margin: 0 auto; /* Center the section */
-    padding: 2rem 0; /* Add spacing within the section */
+    margin: 0 auto;
+    /* Center the section */
+    padding: 2rem 0;
+    /* Add spacing within the section */
     text-align: center;
     font-family: 'Harry Potter', sans-serif;
     font-size: 1.5rem;
     color: gold;
-    background: url('./img/capbg.png') center center no-repeat; 
+    background: url('https://w0.peakpx.com/wallpaper/290/679/HD-wallpaper-harry-potter-harry-potter-and-the-chamber-of-secrets-hogwarts-castle.jpg') no-repeat center center;
     background-size: cover;
-  }
-  
-  .about-us h2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us h2 {
     margin-bottom: 2rem;
     text-align: center;
-    color: white; /* Ensure the text contrasts with the background */
-  }
-  
-  .about-wrapper {
+    color: grey;
+    /* Ensure the text contrasts with the background */
+    position: relative;
+    z-index: 2;
+    /* Bring the text above the background overlay */
+}
+
+.about-wrapper {
     display: flex;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap;
+    /* Ensures responsiveness */
     justify-content: center;
     align-items: center;
-    gap: 2rem; /* Add spacing between image and content */
-  }
-  
-  .about-img {
-    flex: 1; /* Allow the image to adjust its size */
-    max-width: 500px; /* Limit the image size */
+    gap: 2rem;
+    /* Add spacing between image and content */
+    position: relative;
+    z-index: 2;
+    /* Bring the content above the background overlay */
+}
+
+.about-img {
+    flex: 1;
+    /* Allow the image to adjust its size */
+    max-width: 500px;
+    /* Limit the image size */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .about-img img {
+}
+
+.about-img img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Optional: Add rounded corners to the image */
-  }
-  
-  .about-content {
-    flex: 1; /* Allow the content to adjust its size */
-    padding: 0 2rem; /* Add spacing around the text */
-    text-align: left; /* Align the content to the left */
-    color: white; /* Ensure readability on a custom background */
-  }
-  
-  /* ******************END OF ABOUT US************************** */
+    border-radius: 10px;
+    /* Optional: Add rounded corners to the image */
+}
+
+.about-content {
+    flex: 1;
+    /* Allow the content to adjust its size */
+    padding: 0 2rem;
+    /* Add spacing around the text */
+    text-align: left;
+    /* Align the content to the left */
+    color: grey;
+    /* Ensure readability on a custom background */
+    margin: 15rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    /* Add spacing between paragraphs */
+    line-height: 1.6;
+    /* Adjust line height for readability */
+    color: gold;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 15px rgba(255, 223, 0, 1));
+}
+
+/* ******************END OF ABOUT US************************** */
+/* ******************START OF Houses************************** */
+
+.container {
+    background-image: url(./img/capbg.jpg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.find-out-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: #008080;
+    /* Teal color */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.find-out-btn:hover {
+    background-color: #e8cc88;
+}
+
+.image img {
+    width: 500px;
+    height: 500px;
+    animation: float 1s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ******************END OF Houses************************** */
+/* ******************START OF FOOTER************************** */
+footer {
+    margin: 0 auto;
+    /* Center the section */
+    padding: 2rem 0;
+    /* Add spacing within the section */
+    text-align: center;
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 1.5rem;
+    color: gold;
+    background: rgb(16, 8, 8);
+    position: relative;
+    overflow: hidden;
+}
+
+footer p {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: gold;
+    /* Ensure the text contrasts with the background */
+    position: relative;
+    z-index: 2;
+    /* Bring the text above the background overlay */
+}
+/* ******************END OF FOOTER************************** */
+/* ******************START OF POPUP************************** */
+/* Style for the popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content h2 {
+    margin: 0 0 10px;
+    font-family: Arial, sans-serif;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background: #0056b3;
+}
+/* ******************END OF POPUP************************** */
